@@ -9,8 +9,13 @@
 let btn= document.getElementById("btnOpe");
 btn.addEventListener("click", function () {
     let a,b,c;
-    a = parseInt(document.getElementById("txt1").value);
-    b = parseInt(document.getElementById("txt2").value);
+    a = document.getElementById("txt1").value;
+    b = document.getElementById("txt2").value;
+    if(a == "ALANBRITO" && b == "PROGRMACION-1" ){
+        alert("Bienvenido")
+    }else{
+        alert("error")
+    }
     c=a+b;
     document.getElementById("res").innerHTML = `<h1>La suma es: ${c}</h1>`;
    
