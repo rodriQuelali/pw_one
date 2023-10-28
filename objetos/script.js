@@ -16,5 +16,30 @@ let user_2 = {
         numero: 34}
     ]
 };
-console.log(user_2);
+
+let productoFrutas = [{
+    nombre: "Manzana de Chile",
+    color: "roja",
+    precio: [1,2,1,2.5],
+    peso: "300 g"
+},{
+    nombre: "Manzana",
+    color: "verde",
+    precio: [1,1],
+    peso: "350 g"
+}]
+
+
+for (let index = 0; index < productoFrutas.length; index++) {
+   
+    console.log(productoFrutas[index].precio);
+    for (let i = 0; i < productoFrutas[index].precio.length; i++) {
+        const element = productoFrutas[index].precio[i];
+        console.log(element);
+    }
+}
+
+//let nombre = "hola rdorigo"
+//console.log(nombre.length);
+//console.log(productoFrutas);
 
