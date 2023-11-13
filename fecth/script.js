@@ -37,3 +37,30 @@ const https = ()=>{
 }
 
 https();
+
+
+// let datas = [{nombre: "fff",
+// edad: [34,56]}]
+
+//--->>lista de objetos
+// Object.entries(datas).forEach(([key, value]) =>{
+//   console.log(key +":"+ value);
+// })
+
+//listar con forEach
+// datas.forEach(element => {
+//   console.log(element.nombre);
+//   element.edad.forEach(element => {
+//     console.log(element);
+//   });
+// });
+
+//-->se puede modificar sobre el array.
+// array.forEach((elemento, indice, arr) => {
+//   arr[indice] = elemento * 2;
+// });
+
+//-->map(), se utiliza para forma otro array.
+// datas.map(ele =>{
+//   console.log(ele);
+// })
