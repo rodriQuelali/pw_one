@@ -25,15 +25,31 @@
 
 
 const https = ()=>{
-    fetch('https://jsonplaceholder.typicode.com/posts')
+
+
+  fetch('https://jsonplaceholder.typicode.com/posts')
       .then(response => response.json())
       .then(json => {
-        console.log(json)
-        // for (let index = 0; index < json.length; index++) {
-        //     const element = json[index];
-        //     console.log(element.body);
-        // }
-    })
+        let cuerpo="";
+        //console.log(json)
+        json.forEach(element => {
+          console.log(element.title);
+          cuerpo += ` <div class="col-4">
+          <div class="card" class="col-6 col-sm-3" style="width: 18rem;">
+          <img src="https://images.wikidexcdn.net/mwuploads/esssbwiki/thumb/8/84/latest/20180613002622/Link_SSBU.png/1200px-Link_SSBU.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">${element.title}</h5>
+            <p class="card-text">${element.body}</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        </div>`
+        });
+
+        document.getElementById("verDato").innerHTML = cuerpo;
+      })
+
+    
 }
 
 https();
@@ -64,3 +80,4 @@ https();
 // datas.map(ele =>{
 //   console.log(ele);
 // })
+
